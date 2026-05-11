@@ -13,7 +13,7 @@ const PRODUCTS = [
     fluoride: 1500,
     age: "ไม่ระบุ",
     props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
-    image: "images/systema-icemint-1500.jpg",
+    image: "images/systema-icemint-1500.png",
     imageAlt: "Systema Icy Mint"
   },
   {
