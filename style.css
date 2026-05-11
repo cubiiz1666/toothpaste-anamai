@@ -1,0 +1,346 @@
+/* =========================================
+   ยาสีฟันฟลูออไรด์ 1500 ppm — กรมอนามัย
+   Style: สีเขียวฟ้า (Teal-Cyan) ตามต้นแบบ
+   ========================================= */
+
+:root {
+  --teal-dark:   #00897B;
+  --teal-mid:    #26A69A;
+  --teal-light:  #80CBC4;
+  --teal-bg:     #E0F2F1;
+  --cyan-bright: #00BCD4;
+  --purple-card: #7B1FA2;
+  --blue-header: #1565C0;
+  --pink-accent: #E91E8C;
+  --card-bg:     #FFFFFF;
+  --card-shadow: rgba(0,137,123,.18);
+  --text-main:   #1A2F2E;
+  --text-light:  #546E7A;
+  --badge-green: #2E7D32;
+  --badge-bg:    #E8F5E9;
+  --radius-card: 16px;
+  --radius-btn:  10px;
+  --font-th:     'Sarabun', sans-serif;
+  --font-head:   'Prompt', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-th);
+  background: linear-gradient(160deg, #B2DFDB 0%, #80DEEA 40%, #80CBC4 100%);
+  min-height: 100vh;
+  color: var(--text-main);
+}
+
+/* ─── HEADER ─── */
+.site-header {
+  background: linear-gradient(90deg, #00695C 0%, #00ACC1 50%, #1565C0 100%);
+  padding: 20px 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.header-icon {
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+}
+
+.header-icon:last-child { animation-delay: .3s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+
+.site-header h1 {
+  font-family: var(--font-head);
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 800;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0,0,0,.3);
+  letter-spacing: .02em;
+}
+
+/* ─── FILTER BAR ─── */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 24px;
+  background: rgba(255,255,255,.25);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.4);
+}
+
+.filter-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-wrap label {
+  font-weight: 700;
+  font-size: .95rem;
+  color: #1A4A44;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '▼';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: .7rem;
+  color: var(--teal-dark);
+}
+
+select {
+  appearance: none;
+  background: #FFFFFF;
+  border: 2px solid var(--teal-mid);
+  border-radius: var(--radius-btn);
+  padding: 8px 36px 8px 14px;
+  font-family: var(--font-th);
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--teal-dark);
+  cursor: pointer;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  min-width: 230px;
+}
+
+select:focus {
+  border-color: var(--cyan-bright);
+  box-shadow: 0 0 0 3px rgba(0,188,212,.25);
+}
+
+.result-count {
+  font-size: .88rem;
+  font-weight: 600;
+  color: #1A4A44;
+  background: rgba(255,255,255,.45);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* ─── CONTAINER & GRID ─── */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 20px 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+/* ─── CARD ─── */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--card-shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp .45s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,137,123,.28);
+}
+
+/* image area */
+.card-img-wrap {
+  background: linear-gradient(135deg, #E0F7FA 0%, #F1F8E9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 190px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-img-wrap img {
+  max-height: 170px;
+  max-width: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.15));
+  transition: transform .3s ease;
+}
+
+.card:hover .card-img-wrap img {
+  transform: scale(1.05);
+}
+
+/* placeholder when no image */
+.img-placeholder {
+  font-size: 4rem;
+  opacity: .5;
+}
+
+/* fluoride badge */
+.fluoride-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, var(--teal-dark), var(--cyan-bright));
+  color: #fff;
+  font-family: var(--font-head);
+  font-size: .72rem;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  white-space: nowrap;
+}
+
+/* card body */
+.card-body {
+  padding: 16px 18px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.brand-name {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--purple-card);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.product-name {
+  font-size: .88rem;
+  font-weight: 700;
+  color: var(--teal-dark);
+  text-align: center;
+}
+
+/* info rows */
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .88rem;
+  margin-top: 4px;
+}
+
+.info-table tr {
+  border-bottom: 1px dashed #CFE8E6;
+}
+
+.info-table tr:last-child { border-bottom: none; }
+
+.info-table td {
+  padding: 6px 4px;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.info-table .lbl {
+  color: var(--text-light);
+  font-weight: 600;
+  white-space: nowrap;
+  padding-right: 8px;
+  width: 38%;
+}
+
+.info-table .val {
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.fluoride-val {
+  font-weight: 800 !important;
+  color: var(--teal-dark) !important;
+}
+
+/* properties list */
+.props-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.props-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: .85rem;
+  line-height: 1.45;
+}
+
+.props-list li::before {
+  content: '•';
+  color: var(--teal-mid);
+  font-weight: 900;
+  font-size: 1.1em;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+/* ─── FOOTER ─── */
+.site-footer {
+  background: linear-gradient(90deg, #004D40, #006064);
+  color: rgba(255,255,255,.85);
+  text-align: center;
+  padding: 20px 24px;
+  font-size: .88rem;
+  line-height: 1.8;
+}
+
+.site-footer strong { color: #80DEEA; }
+.footer-sub { font-size: .78rem; color: rgba(255,255,255,.55); margin-top: 4px; }
+
+/* ─── EMPTY STATE ─── */
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #1A4A44;
+  font-size: 1.1rem;
+  opacity: .7;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+  .filter-bar { flex-direction: column; align-items: flex-start; }
+  select { min-width: unset; width: 100%; }
+}
