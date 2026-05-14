@@ -1,452 +1,749 @@
 // ================================================================
 // ข้อมูลยาสีฟันฟลูออไรด์ ≥1400 ppm ในท้องตลาดประเทศไทย
-// แหล่งข้อมูล: กองทันตสาธารณสุข กรมอนามัย / ฉลากผลิตภัณฑ์
-// ปรับปรุง พ.ศ. 2568
+// แหล่งข้อมูล: กองทันตสาธารณสุข กรมอนามัย กระทรวงสาธารณสุข
+// ปรับปรุง พ.ศ. 2568 | รวม 74 รายการ
 // ================================================================
 
 const PRODUCTS = [
 
-  // ─── SYSTEMA ───
+  // ID: 83
   {
-    brand: "ยาสีฟันซิสเท็มมา",
-    name: "รุ่น Ultra Care&Protect ไอซี่ มินต์",
+    brand: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect ไอซี่ มินต์",
     fluoride: 1500,
     age: "ไม่ระบุ",
     props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
-    image: "images/systema-icemint-1500.png",
-    imageAlt: "Systema Icy Mint"
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture83.png",
+    imageAlt: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect ไอซี่ มินต์"
   },
+
+  // ID: 84
   {
-    brand: "ยาสีฟันซิสเท็มมา",
-    name: "รุ่น Ultra Care&Protect สปริง มินต์",
+    brand: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect สปริง มินต์",
     fluoride: 1500,
     age: "ไม่ระบุ",
     props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
-    image: "https://placehold.co/300x170/E0F7FA/00695C?text=SYSTEMA%0ASpring+Mint",
-    imageAlt: "Systema Spring Mint"
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture84.png",
+    imageAlt: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect สปริง มินต์"
   },
+
+  // ID: 85
   {
-    brand: "ยาสีฟันซิสเท็มมา",
-    name: "รุ่น Ultra Care&Protect เชอร์รี่ บลอสซัม",
+    brand: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect เชอร์รี่ บลอสซัม",
     fluoride: 1500,
     age: "ไม่ระบุ",
     props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
-    image: "https://placehold.co/300x170/FCE4EC/880E4F?text=SYSTEMA%0ACherry+Blossom",
-    imageAlt: "Systema Cherry Blossom"
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture85.png",
+    imageAlt: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect เชอร์รี่ บลอสซัม"
   },
+
+  // ID: 86
   {
-    brand: "ยาสีฟันซิสเท็มมา",
-    name: "รุ่น Ultra Care&Protect แบกที่ คูล",
+    brand: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect แมกซี่ คูล",
     fluoride: 1500,
     age: "ไม่ระบุ",
     props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
-    image: "https://placehold.co/300x170/E0F7FA/00695C?text=SYSTEMA%0ABakti+Cool",
-    imageAlt: "Systema Bakti Cool"
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture86.png",
+    imageAlt: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect แมกซี่ คูล"
   },
+
+  // ID: 117
   {
-    brand: "ยาสีฟันซิสเท็มมา",
-    name: "รุ่น Sensitive Pro-relief มินต์",
+    brand: "ยาสีฟันซอลส์ รุ่น คิง เฮิร์บ",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture117.png",
+    imageAlt: "ยาสีฟันซอลส์ รุ่น คิง เฮิร์บ"
+  },
+
+  // ID: 138
+  {
+    brand: "ยาสีฟันเดนทิสเต้ รุ่น ยาสีฟันแปรงแห้งสำหรับเด็ก กลิ่นมิกซ์ ฟรุต",
+    fluoride: 1500,
+    age: "6 ปีขึ้นไป",
+    props: ["ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture138.png",
+    imageAlt: "ยาสีฟันเดนทิสเต้ รุ่น ยาสีฟันแปรงแห้งสำหรับเด็ก กลิ่นมิกซ์ ฟรุต"
+  },
+
+  // ID: 140
+  {
+    brand: "ยาสีฟันเดนทิสเต้ รุ่น Anticavity Max Fluoride (สูตรแปรงแห้ง)",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture140.png",
+    imageAlt: "ยาสีฟันเดนทิสเต้ รุ่น Anticavity Max Fluoride (สูตรแปรงแห้ง)"
+  },
+
+  // ID: 144
+  {
+    brand: "ยาสีฟันเดนทิสเต้ รุ่น Ultra Sensitive",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ", "ลดการสะสมของแบคทีเรีย", "ลดอาการเสียวฟัน", "ดูแลสุขภาพเหงือก", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture144.png",
+    imageAlt: "ยาสีฟันเดนทิสเต้ รุ่น Ultra Sensitive"
+  },
+
+  // ID: 161
+  {
+    brand: "ยาสีฟันไฮเฮิร์บ รุ่น เดย์ แอนด์ ไนท์ แคร์",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture161.png",
+    imageAlt: "ยาสีฟันไฮเฮิร์บ รุ่น เดย์ แอนด์ ไนท์ แคร์"
+  },
+
+  // ID: 162
+  {
+    brand: "ยาสีฟันไฮเฮิร์บ รุ่น แอดวานซ์ กัม แคร์",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture162.png",
+    imageAlt: "ยาสีฟันไฮเฮิร์บ รุ่น แอดวานซ์ กัม แคร์"
+  },
+
+  // ID: 163
+  {
+    brand: "ยาสีฟันไฮเฮิร์บ รุ่น Premium Organic Care",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ลดการสะสมของแบคทีเรีย", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture163.png",
+    imageAlt: "ยาสีฟันไฮเฮิร์บ รุ่น Premium Organic Care"
+  },
+
+  // ID: 165
+  {
+    brand: "ยาสีฟันออรัลเฮิร์บ รุ่น whitening",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "ทำให้ฟันขาว", "ลดการสะสมของแบคทีเรีย"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture165.png",
+    imageAlt: "ยาสีฟันออรัลเฮิร์บ รุ่น whitening"
+  },
+
+  // ID: 216
+  {
+    brand: "ยาสีฟันกู๊ดเอจ รุ่น Sensitive Shield",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดอาการเสียวฟัน", "ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture216.png",
+    imageAlt: "ยาสีฟันกู๊ดเอจ รุ่น Sensitive Shield"
+  },
+
+  // ID: 217
+  {
+    brand: "ยาสีฟันกู๊ดเอจ รุ่น Hyper Salt",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture217.png",
+    imageAlt: "ยาสีฟันกู๊ดเอจ รุ่น Hyper Salt"
+  },
+
+  // ID: 218
+  {
+    brand: "ยาสีฟันกู๊ดเอจ รุ่น Healthy Life Healthy World",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["เพิ่มความชุ่มชื้นในช่องปาก", "ไม่มีสาร SLS", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture218.png",
+    imageAlt: "ยาสีฟันกู๊ดเอจ รุ่น Healthy Life Healthy World"
+  },
+
+  // ID: 287
+  {
+    brand: "ยาสีฟันเดลตาเมท รุ่น Peach Mint",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดอาการเสียวฟัน", "ไม่มีสาร SLS", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture287.png",
+    imageAlt: "ยาสีฟันเดลตาเมท รุ่น Peach Mint"
+  },
+
+  // ID: 288
+  {
+    brand: "ยาสีฟันเดลตาเมท รุ่น Yusu Mint",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ไม่มีสาร SLS", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture288.png",
+    imageAlt: "ยาสีฟันเดลตาเมท รุ่น Yusu Mint"
+  },
+
+  // ID: 297
+  {
+    brand: "ยาสีฟันบูม",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดอาการเสียวฟัน", "ลดการสะสมของแบคทีเรีย"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture297.png",
+    imageAlt: "ยาสีฟันบูม"
+  },
+
+  // ID: 325
+  {
+    brand: "ยาสีฟันออเดอร์สมาย",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture325.png",
+    imageAlt: "ยาสีฟันออเดอร์สมาย"
+  },
+
+  // ID: 360
+  {
+    brand: "ยาสีฟันSis' s นมแพะ",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture360.png",
+    imageAlt: "ยาสีฟันSis' s นมแพะ"
+  },
+
+  // ID: 366
+  {
+    brand: "ยาสีฟันขิง ขิง",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture366.png",
+    imageAlt: "ยาสีฟันขิง ขิง"
+  },
+
+  // ID: 374
+  {
+    brand: "ยาสีฟันไวซรอย รุ่น Advanced Probiotic",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดอาการเสียวฟัน", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture374.png",
+    imageAlt: "ยาสีฟันไวซรอย รุ่น Advanced Probiotic"
+  },
+
+  // ID: 380
+  {
+    brand: "ยาสีฟันKindee รุ่น Organic Fluoride 1500 ppm (Strawberry) Anti Plaque",
+    fluoride: 1500,
+    age: "6 ปีขึ้นไป",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture380.png",
+    imageAlt: "ยาสีฟันKindee รุ่น Organic Fluoride 1500 ppm (Strawberry) Anti Plaque"
+  },
+
+  // ID: 381
+  {
+    brand: "ยาสีฟันKindee รุ่น Organic Fluoride 1500 ppm (Watermelon) Anti Plaque",
+    fluoride: 1500,
+    age: "6 ปีขึ้นไป",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture381.png",
+    imageAlt: "ยาสีฟันKindee รุ่น Organic Fluoride 1500 ppm (Watermelon) Anti Plaque"
+  },
+
+  // ID: 391
+  {
+    brand: "ยาสีฟันยินตัน ออริจินัล",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟัันผุ", "ลดอาการเสียวฟัน", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture391.png",
+    imageAlt: "ยาสีฟันยินตัน ออริจินัล"
+  },
+
+  // ID: 392
+  {
+    brand: "ยาสีฟันยินตัน สเปียร์มินต์",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟัันผุ", "ลดอาการเสียวฟัน", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture392.png",
+    imageAlt: "ยาสีฟันยินตัน สเปียร์มินต์"
+  },
+
+  // ID: 396
+  {
+    brand: "ยาสีฟันซอลล์ เสน่ห์",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture396.png",
+    imageAlt: "ยาสีฟันซอลล์ เสน่ห์"
+  },
+
+  // ID: 404
+  {
+    brand: "ยาสีฟันแฮร์วอล รุ่น Whitening Plus",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture404.png",
+    imageAlt: "ยาสีฟันแฮร์วอล รุ่น Whitening Plus"
+  },
+
+  // ID: 413
+  {
+    brand: "ยาสีฟันด็อกเตอร์ เจ",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture413.png",
+    imageAlt: "ยาสีฟันด็อกเตอร์ เจ"
+  },
+
+  // ID: 422
+  {
+    brand: "ยาสีฟันเอ็มเดนท์",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture422.png",
+    imageAlt: "ยาสีฟันเอ็มเดนท์"
+  },
+
+  // ID: 426
+  {
+    brand: "ยาสีฟันสมุนไพร Tenplus รุ่น ฟลูออไรด์",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture426.png",
+    imageAlt: "ยาสีฟันสมุนไพร Tenplus รุ่น ฟลูออไรด์"
+  },
+
+  // ID: 443
+  {
+    brand: "ยาสีฟันอรุณ (Arunn)",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture443.png",
+    imageAlt: "ยาสีฟันอรุณ (Arunn)"
+  },
+
+  // ID: 444
+  {
+    brand: "ยาสีฟันสมุนไพรAuraklin plus white",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture444.png",
+    imageAlt: "ยาสีฟันสมุนไพรAuraklin plus white"
+  },
+
+  // ID: 448
+  {
+    brand: "ยาสีฟัน Ko Rich รุ่น Fluoride 1500 ppm",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture448.png",
+    imageAlt: "ยาสีฟัน Ko Rich รุ่น Fluoride 1500 ppm"
+  },
+
+  // ID: 451
+  {
+    brand: "ยาสีฟัน Sparkle รุ่น instant white",
+    fluoride: 1500,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture451.png",
+    imageAlt: "ยาสีฟัน Sparkle รุ่น instant white"
+  },
+
+  // ID: 361
+  {
+    brand: "ยาสีฟันเวลเดนท์ รุ่น Extreme Awake",
+    fluoride: 1499,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture361.png",
+    imageAlt: "ยาสีฟันเวลเดนท์ รุ่น Extreme Awake"
+  },
+
+  // ID: 415
+  {
+    brand: "ยาสีฟันคูฬเดนท์ (CUDent) สูตร Cooling Peppermint",
+    fluoride: 1498,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture415.png",
+    imageAlt: "ยาสีฟันคูฬเดนท์ (CUDent) สูตร Cooling Peppermint"
+  },
+
+  // ID: 177
+  {
+    brand: "ยาสีฟันกิฟฟารีน รุ่น ELDERLY NATURE CARE",
+    fluoride: 1492,
+    age: "ผู้สูงอายุ",
+    props: ["ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture177.png",
+    imageAlt: "ยาสีฟันกิฟฟารีน รุ่น ELDERLY NATURE CARE"
+  },
+
+  // ID: 178
+  {
+    brand: "ยาสีฟันกิฟฟารีน รุ่น HEMP SEED OIL",
+    fluoride: 1492,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture178.png",
+    imageAlt: "ยาสีฟันกิฟฟารีน รุ่น HEMP SEED OIL"
+  },
+
+  // ID: 219
+  {
+    brand: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น 9X HERBAL PLUS FLUORIDE",
+    fluoride: 1490,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture219.png",
+    imageAlt: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น 9X HERBAL PLUS FLUORIDE"
+  },
+
+  // ID: 220
+  {
+    brand: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น G.U.M.X. PROPOLIS PLUS FLUORIDE",
+    fluoride: 1490,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture220.png",
+    imageAlt: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น G.U.M.X. PROPOLIS PLUS FLUORIDE"
+  },
+
+  // ID: 221
+  {
+    brand: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น ZURFACEX HYPERSENSITIVE CARE FLUORIDE",
+    fluoride: 1490,
+    age: "ไม่ระบุ",
+    props: ["ลดอาการเสียวฟัน", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture221.png",
+    imageAlt: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น ZURFACEX HYPERSENSITIVE CARE FLUORIDE"
+  },
+
+  // ID: 222
+  {
+    brand: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น BREATHX FLUORIDE",
+    fluoride: 1490,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture222.png",
+    imageAlt: "ยาสีฟันด็อกเตอร์พงศ์ รุ่น BREATHX FLUORIDE"
+  },
+
+  // ID: 46
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น ออริจินัล",
+    fluoride: 1480,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture46.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น ออริจินัล"
+  },
+
+  // ID: 48
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น ไวท์ เอ็กซ์เพิร์ท",
+    fluoride: 1480,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture48.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น ไวท์ เอ็กซ์เพิร์ท"
+  },
+
+  // ID: 61
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น ออร์โธ มายด์ แอนด์ แคร์",
+    fluoride: 1480,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดอาการเสียวฟัน", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture61.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น ออร์โธ มายด์ แอนด์ แคร์"
+  },
+
+  // ID: 62
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น ออร์โธ แอคทีฟ",
+    fluoride: 1480,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture62.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น ออร์โธ แอคทีฟ"
+  },
+
+  // ID: 47
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น กรีนที เบร็ธ เอ็กซ์เพิร์ท",
+    fluoride: 1460,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture47.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น กรีนที เบร็ธ เอ็กซ์เพิร์ท"
+  },
+
+  // ID: 58
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส เฮอร์เบิลกัมแคร์",
+    fluoride: 1460,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดอาการเสียวฟัน"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture58.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส เฮอร์เบิลกัมแคร์"
+  },
+
+  // ID: 59
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส เนเจอร์แคร์",
+    fluoride: 1460,
+    age: "อายุ 40 ปีขึ้นไป",
+    props: ["ทำให้ฟันขาว", "ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture59.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส เนเจอร์แคร์"
+  },
+
+  // ID: 19
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น ปัญจเวทสมุนไพร ดีท็อกซ์",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture19.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น ปัญจเวทสมุนไพร ดีท็อกซ์"
+  },
+
+  // ID: 20
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น ดีท็อกซ์ เซสตี้ ยูซุ",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture20.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น ดีท็อกซ์ เซสตี้ ยูซุ"
+  },
+
+  // ID: 23
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น สดชื่นเย็นซ่า",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture23.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น สดชื่นเย็นซ่า"
+  },
+
+  // ID: 24
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น รสยอดนิยม",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture24.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น รสยอดนิยม"
+  },
+
+  // ID: 27
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น คอนฟิเดนท์ สมายล์ BT21",
+    fluoride: 1450,
+    age: "ยาสีฟันสำหรับผู้ใหญ่",
+    props: ["เพิ่มความสดชื่นมั่นใจ", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture27.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น คอนฟิเดนท์ สมายล์ BT21"
+  },
+
+  // ID: 36
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น โททอล ชาร์โคล ดีพ คลีน",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ", "ลดอาการเสียวฟัน", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture36.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น โททอล ชาร์โคล ดีพ คลีน"
+  },
+
+  // ID: 37
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น โททอล ไวท์เทนนิ่ง",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ", "ลดอาการเสียวฟัน", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture37.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น โททอล ไวท์เทนนิ่ง"
+  },
+
+  // ID: 38
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น โททอล โปรเฟสชั่นแนล คลีน เจล",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ", "ลดอาการเสียวฟัน", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture38.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น โททอล โปรเฟสชั่นแนล คลีน เจล"
+  },
+
+  // ID: 39
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น โททอล โปรเฟสชั่นแนล คลีน ครีม",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ", "ลดการเสียวฟัน", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture39.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น โททอล โปรเฟสชั่นแนล คลีน ครีม"
+  },
+
+  // ID: 40
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น โททอล แอดวานส์ เฟรช",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ลดอาการเสียวฟัน", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture40.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น โททอล แอดวานส์ เฟรช"
+  },
+
+  // ID: 42
+  {
+    brand: "ยาสีฟันคอลเกต รุ่น โททอล เซนซิทีวิตี้ กัม เฮลต์",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ลดการสะสมของแบคทีเรีย", "ป้องกันฟันผุ", "ลดอาการเสียวฟัน", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture42.png",
+    imageAlt: "ยาสีฟันคอลเกต รุ่น โททอล เซนซิทีวิตี้ กัม เฮลต์"
+  },
+
+  // ID: 44
+  {
+    brand: "ยาสีฟันใกล้ชิด รุ่น ดีพ แอคชั่น เรดฮอต",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture44.png",
+    imageAlt: "ยาสีฟันใกล้ชิด รุ่น ดีพ แอคชั่น เรดฮอต"
+  },
+
+  // ID: 56
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส เซนซิทีฟ",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดอาการเสียวฟัน"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture56.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส เซนซิทีฟ"
+  },
+
+  // ID: 57
+  {
+    brand: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส ไวท์เทนนิ่ง",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ทำให้ฟันขาว", "ดูแลสุขภาพเหงือก", "ลดอาการเสียวฟัน"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture57.png",
+    imageAlt: "ยาสีฟันฟลูโอคารีล รุ่น 40พลัส ไวท์เทนนิ่ง"
+  },
+
+  // ID: 123
+  {
+    brand: "ยาสีฟันเซ็นโซดายน์ รุ่น เฮอร์เบิล มัลติ แคร์",
     fluoride: 1450,
     age: "ไม่ระบุ",
     props: ["ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
-    image: "https://placehold.co/300x170/E8EAF6/283593?text=SYSTEMA%0ASensitive",
-    imageAlt: "Systema Sensitive"
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture123.png",
+    imageAlt: "ยาสีฟันเซ็นโซดายน์ รุ่น เฮอร์เบิล มัลติ แคร์"
   },
 
-  // ─── SALZ ───
+  // ID: 128
   {
-    brand: "ยาสีฟันซอลส์",
-    name: "รุ่น คิง เฮิร์บ",
-    fluoride: 1500,
+    brand: "ยาสีฟันเซ็นโซดายน์ รุ่น เซ็นซิทิวิตี้ & กัม",
+    fluoride: 1450,
     age: "ไม่ระบุ",
-    props: ["ลดการสะสมของแบคทีเรีย", "สมุนไพรธรรมชาติ", "ดูแลสุขภาพเหงือก"],
-    image: "https://placehold.co/300x170/E8F5E9/1B5E20?text=SALZ%0AKing+Herb",
-    imageAlt: "Salz King Herb"
-  },
-  {
-    brand: "ยาสีฟันซอลส์",
-    name: "รุ่น แซลต์ ไวท์เทนนิ่ง",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้น", "ลดคราบสีฟัน", "ป้องกันฟันผุ", "ลดกลิ่นปาก"],
-    image: "https://placehold.co/300x170/FFF9C4/F57F17?text=SALZ%0AWhitening",
-    imageAlt: "Salz Whitening"
-  },
-  {
-    brand: "ยาสีฟันซอลส์",
-    name: "รุ่น เซนสิทีฟ ซอลต์",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "เกลือธรรมชาติ"],
-    image: "https://placehold.co/300x170/E3F2FD/0D47A1?text=SALZ%0ASensitive",
-    imageAlt: "Salz Sensitive"
+    props: ["ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture128.png",
+    imageAlt: "ยาสีฟันเซ็นโซดายน์ รุ่น เซ็นซิทิวิตี้ & กัม"
   },
 
-  // ─── DENTISTE ───
+  // ID: 130
   {
-    brand: "ยาสีฟันเดนทิสเต้",
-    name: "รุ่น ยาสีฟันแปรงแห้งสำหรับเด็ก กลิ่นมิกซ์ ฟรุต",
-    fluoride: 1500,
-    age: "6 ปีขึ้นไป",
-    props: ["ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ", "เหมาะสำหรับเด็ก"],
-    image: "https://placehold.co/300x170/F3E5F5/4A148C?text=Dentiste%0AKids+Fruit",
-    imageAlt: "Dentiste Kids"
-  },
-  {
-    brand: "ยาสีฟันเดนทิสเต้",
-    name: "รุ่น Original สูตรกลางคืน",
-    fluoride: 1500,
+    brand: "ยาสีฟันเซ็นโซดายน์ รุ่น คอมพลีท โพรเทคชั่น พลัส",
+    fluoride: 1450,
     age: "ไม่ระบุ",
-    props: ["ลดกลิ่นปาก", "ป้องกันฟันผุ", "ดูแลเหงือก", "สูตรใช้กลางคืน"],
-    image: "https://placehold.co/300x170/EDE7F6/311B92?text=Dentiste%0ANight",
-    imageAlt: "Dentiste Night"
-  },
-  {
-    brand: "ยาสีฟันเดนทิสเต้",
-    name: "รุ่น Whitening Plus",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้น", "ลดกลิ่นปาก", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/E8EAF6/1A237E?text=Dentiste%0AWhitening",
-    imageAlt: "Dentiste Whitening"
+    props: ["ทำให้ฟันขาวขึ้น", "ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture130.png",
+    imageAlt: "ยาสีฟันเซ็นโซดายน์ รุ่น คอมพลีท โพรเทคชั่น พลัส"
   },
 
-  // ─── COLGATE ───
+  // ID: 231
   {
-    brand: "ยาสีฟันคอลเกต",
-    name: "รุ่น Total Pro-Gum Health",
+    brand: "ยาสีฟันออรัลบี รุ่น Gum and Enamel  (สูตรป้องกันฟันผุ)",
     fluoride: 1450,
     age: "ไม่ระบุ",
-    props: ["ป้องกันฟันผุ", "ดูแลเหงือก 12 ชั่วโมง", "ลดแบคทีเรีย", "ลดกลิ่นปาก"],
-    image: "https://placehold.co/300x170/FFF3E0/E65100?text=Colgate%0ATotal+Pro",
-    imageAlt: "Colgate Total Pro"
-  },
-  {
-    brand: "ยาสีฟันคอลเกต",
-    name: "รุ่น Sensitive Pro-Relief",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ลดอาการเสียวฟันทันที", "ป้องกันฟันผุ", "ดูแลเนื้อฟัน"],
-    image: "https://placehold.co/300x170/FFF3E0/BF360C?text=Colgate%0ASensitive",
-    imageAlt: "Colgate Sensitive"
-  },
-  {
-    brand: "ยาสีฟันคอลเกต",
-    name: "รุ่น Max White Expert White",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้นใน 7 วัน", "ลดคราบสี", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/FFF3E0/E65100?text=Colgate%0AMax+White",
-    imageAlt: "Colgate Max White"
+    props: ["ป้องกันฟันผุ", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture231.png",
+    imageAlt: "ยาสีฟันออรัลบี รุ่น Gum and Enamel  (สูตรป้องกันฟันผุ)"
   },
 
-  // ─── ORAL-B ───
+  // ID: 232
   {
-    brand: "ยาสีฟันโอรัล-บี",
-    name: "รุ่น Pro-Expert Professional Protection",
+    brand: "ยาสีฟันออรัลบี รุ่น Gum and Enamel (สูตรสะอาดสดชื่น)",
     fluoride: 1450,
     age: "ไม่ระบุ",
-    props: ["ป้องกันฟันผุ 7 ประการ", "ลดคราบหินปูน", "ดูแลเหงือก", "ลดกลิ่นปาก"],
-    image: "https://placehold.co/300x170/E3F2FD/0D47A1?text=Oral-B%0APro-Expert",
-    imageAlt: "Oral-B Pro-Expert"
-  },
-  {
-    brand: "ยาสีฟันโอรัล-บี",
-    name: "รุ่น 3D White Luxe Glamorous White",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ขจัดคราบสีฟัน", "ฟันขาวขึ้น", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/E8EAF6/1565C0?text=Oral-B%0A3D+White",
-    imageAlt: "Oral-B 3D White"
+    props: ["ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture232.png",
+    imageAlt: "ยาสีฟันออรัลบี รุ่น Gum and Enamel (สูตรสะอาดสดชื่น)"
   },
 
-  // ─── SENSODYNE ───
+  // ID: 233
   {
-    brand: "ยาสีฟันเซนโซดายน์",
-    name: "รุ่น Rapid Relief",
+    brand: "ยาสีฟันออรัลบี รุ่น Gum and Enamel (สูตรฟันขาว)",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ลดการสะสมของแบคทีเรีย", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture233.png",
+    imageAlt: "ยาสีฟันออรัลบี รุ่น Gum and Enamel (สูตรฟันขาว)"
+  },
+
+  // ID: 235
+  {
+    brand: "ยาสีฟันออรัลบี รุ่น 3D White Fast White (Fortifying Mineral)",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ทำให้ฟันขาว", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture235.png",
+    imageAlt: "ยาสีฟันออรัลบี รุ่น 3D White Fast White (Fortifying Mineral)"
+  },
+
+  // ID: 435
+  {
+    brand: "ยาสีฟัน CURAPROX รุ่น enzycal 1450",
+    fluoride: 1450,
+    age: "ไม่ระบุ",
+    props: ["ป้องกันฟันผุ", "ลดอาการเสียวฟัน", "ลดการสะสมของแบคทีเรีย", "ไม่มีสาร SLS"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture435.png",
+    imageAlt: "ยาสีฟัน CURAPROX รุ่น enzycal 1450"
+  },
+
+  // ID: 108
+  {
+    brand: "ยาสีฟันพาโรดอนแทกซ์ รุ่น  ฟลูออไรด์",
     fluoride: 1400,
     age: "ไม่ระบุ",
-    props: ["บรรเทาเสียวฟันได้เร็วใน 60 วินาที", "ป้องกันฟันผุ", "ดูแลเนื้อฟัน"],
-    image: "https://placehold.co/300x170/E3F2FD/0D47A1?text=Sensodyne%0ARapid+Relief",
-    imageAlt: "Sensodyne Rapid Relief"
+    props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture108.png",
+    imageAlt: "ยาสีฟันพาโรดอนแทกซ์ รุ่น  ฟลูออไรด์"
   },
+
+  // ID: 109
   {
-    brand: "ยาสีฟันเซนโซดายน์",
-    name: "รุ่น Repair & Protect",
-    fluoride: 1426,
-    age: "ไม่ระบุ",
-    props: ["ซ่อมแซมเนื้อฟันที่บอบบาง", "ลดอาการเสียวฟัน", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/E8F5E9/1B5E20?text=Sensodyne%0ARepair",
-    imageAlt: "Sensodyne Repair"
-  },
-  {
-    brand: "ยาสีฟันเซนโซดายน์",
-    name: "รุ่น True White",
+    brand: "ยาสีฟันพาโรดอนแทกซ์ รุ่น คอมพลีท โพรเทคชั่น",
     fluoride: 1400,
     age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้น", "ลดอาการเสียวฟัน", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/F3E5F5/4A148C?text=Sensodyne%0ATrue+White",
-    imageAlt: "Sensodyne True White"
-  },
-
-  // ─── CREST ───
-  {
-    brand: "ยาสีฟันเครสต์",
-    name: "รุ่น 3D White Brilliance",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ขจัดคราบสี 95%", "ฟันขาวขึ้น", "ป้องกันฟันผุ", "ลดแบคทีเรีย"],
-    image: "https://placehold.co/300x170/E3F2FD/1565C0?text=Crest%0A3D+White",
-    imageAlt: "Crest 3D White"
-  },
-  {
-    brand: "ยาสีฟันเครสต์",
-    name: "รุ่น Pro-Health Advanced",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ป้องกัน 7 ปัญหาช่องปาก", "ดูแลเหงือก", "ลดคราบหินปูน"],
-    image: "https://placehold.co/300x170/E8EAF6/283593?text=Crest%0APro-Health",
-    imageAlt: "Crest Pro-Health"
-  },
-
-  // ─── GLISTER (Amway) ───
-  {
-    brand: "ยาสีฟันกลิสเตอร์",
-    name: "รุ่น Multi-Action",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ป้องกันฟันผุ", "ฟันขาวขึ้น", "ลดคราบ", "ดูแลเหงือก"],
-    image: "https://placehold.co/300x170/E8F5E9/2E7D32?text=Glister%0AMulti-Action",
-    imageAlt: "Glister Multi-Action"
-  },
-
-  // ─── DARLIE ───
-  {
-    brand: "ยาสีฟันดาร์ลี่",
-    name: "รุ่น Double Action Expert White",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้น", "ป้องกันฟันผุ", "ลดกลิ่นปาก", "ลดคราบสีฟัน"],
-    image: "https://placehold.co/300x170/E0F7FA/006064?text=Darlie%0AExpert+White",
-    imageAlt: "Darlie Expert White"
-  },
-  {
-    brand: "ยาสีฟันดาร์ลี่",
-    name: "รุ่น All Shiny White Extra Whitening",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้น", "ป้องกันฟันผุ", "เคลือบป้องกันคราบ"],
-    image: "https://placehold.co/300x170/FFF9C4/F57F17?text=Darlie%0AAll+Shiny",
-    imageAlt: "Darlie All Shiny"
-  },
-  {
-    brand: "ยาสีฟันดาร์ลี่",
-    name: "รุ่น Herb Total Care",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["สมุนไพร 7 ชนิด", "ป้องกันฟันผุ", "ดูแลเหงือก"],
-    image: "https://placehold.co/300x170/E8F5E9/1B5E20?text=Darlie%0AHerb+Care",
-    imageAlt: "Darlie Herb"
-  },
-
-  // ─── GC Tooth Mousse / MI Paste ───
-  {
-    brand: "ยาสีฟัน GC Tooth Mousse Plus",
-    name: "สูตรมีฟลูออไรด์ (สำหรับผู้ใหญ่)",
-    fluoride: 900,
-    age: "ผู้ใหญ่",
-    props: ["เสริมแร่ธาตุแคลเซียม-ฟอสเฟต", "ลดอาการเสียวฟัน", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/FFF9C4/E65100?text=GC+Tooth%0AMousse+Plus",
-    imageAlt: "GC Tooth Mousse Plus",
-    note: "* ฟลูออไรด์ < 1400 ppm (แสดงเพื่อเปรียบเทียบ)"
-  },
-
-  // ─── Elmex ───
-  {
-    brand: "ยาสีฟัน Elmex",
-    name: "รุ่น Anti-Caries Professional",
-    fluoride: 1400,
-    age: "ไม่ระบุ",
-    props: ["ป้องกันฟันผุ", "เสริมความแข็งแรงของเนื้อฟัน", "ลดการกัดกร่อน"],
-    image: "https://placehold.co/300x170/FFF3E0/BF360C?text=Elmex%0AAnti-Caries",
-    imageAlt: "Elmex Anti-Caries"
-  },
-  {
-    brand: "ยาสีฟัน Elmex",
-    name: "รุ่น Sensitive Professional",
-    fluoride: 1400,
-    age: "ไม่ระบุ",
-    props: ["ลดอาการเสียวฟัน", "ป้องกันฟันผุ", "เสริมเนื้อฟัน"],
-    image: "https://placehold.co/300x170/E8EAF6/283593?text=Elmex%0ASensitive",
-    imageAlt: "Elmex Sensitive"
-  },
-
-  // ─── Parodontax ───
-  {
-    brand: "ยาสีฟัน Parodontax",
-    name: "รุ่น Extra Fresh Daily",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ลดเลือดออกตามไรฟัน", "ป้องกันฟันผุ", "ดูแลเหงือกอ่อนแอ"],
-    image: "https://placehold.co/300x170/FCE4EC/880E4F?text=Parodontax%0AExtra+Fresh",
-    imageAlt: "Parodontax Extra Fresh"
-  },
-  {
-    brand: "ยาสีฟัน Parodontax",
-    name: "รุ่น Whitening Daily",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ลดเลือดออกตามไรฟัน", "ฟันขาวขึ้น", "ดูแลเหงือก"],
-    image: "https://placehold.co/300x170/FCE4EC/880E4F?text=Parodontax%0AWhitening",
-    imageAlt: "Parodontax Whitening"
-  },
-
-  // ─── Ecodenta ───
-  {
-    brand: "ยาสีฟัน Ecodenta",
-    name: "รุ่น Extra Whitening",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้น", "ส่วนผสมออร์แกนิก", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/E8F5E9/1B5E20?text=Ecodenta%0AWhitening",
-    imageAlt: "Ecodenta"
-  },
-
-  // ─── Arm & Hammer ───
-  {
-    brand: "ยาสีฟัน Arm & Hammer",
-    name: "รุ่น Advance White Extreme Whitening",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["เบกกิ้งโซดาขัดคราบ", "ฟันขาวขึ้น", "ป้องกันฟันผุ", "ลดกลิ่นปาก"],
-    image: "https://placehold.co/300x170/E3F2FD/0D47A1?text=Arm+%26+Hammer%0AWhitening",
-    imageAlt: "Arm & Hammer"
-  },
-
-  // ─── Aquafresh ───
-  {
-    brand: "ยาสีฟัน Aquafresh",
-    name: "รุ่น Extreme Clean Whitening",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["สามแถบสี 3 สูตร", "ลดคราบสี", "ป้องกันฟันผุ", "ลมหายใจสดชื่น"],
-    image: "https://placehold.co/300x170/E0F7FA/006064?text=Aquafresh%0AExtreme+Clean",
-    imageAlt: "Aquafresh"
-  },
-
-  // ─── Signal ───
-  {
-    brand: "ยาสีฟัน Signal",
-    name: "รุ่น White Now Gold",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ฟันขาวขึ้นทันทีที่แปรง", "ป้องกันฟันผุ", "ลดคราบ"],
-    image: "https://placehold.co/300x170/FFF9C4/F57F17?text=Signal%0AWhite+Now",
-    imageAlt: "Signal White Now"
-  },
-
-  // ─── Pearlie White ───
-  {
-    brand: "ยาสีฟัน Pearlie White",
-    name: "รุ่น BioMin Sensitive",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["BioMin เสริมแร่ธาตุ", "ลดเสียวฟัน", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/F3E5F5/4A148C?text=Pearlie+White%0ABioMin",
-    imageAlt: "Pearlie White BioMin"
-  },
-
-  // ─── นาโน เซ็นส์ (ไทย) ───
-  {
-    brand: "ยาสีฟัน Nano Sense",
-    name: "รุ่น ฟลูออไรด์ ไวท์เทนนิ่ง",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["อนุภาคนาโนขจัดคราบ", "ป้องกันฟันผุ", "ดูแลเหงือก"],
-    image: "https://placehold.co/300x170/E0F7FA/00695C?text=Nano+Sense%0AWhitening",
-    imageAlt: "Nano Sense"
-  },
-
-  // ─── Closeup ───
-  {
-    brand: "ยาสีฟัน Close Up",
-    name: "รุ่น Icy White",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ลมหายใจสดชื่น", "ฟันขาวขึ้น", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/E3F2FD/1565C0?text=Close+Up%0AIcy+White",
-    imageAlt: "Close Up Icy White"
-  },
-
-  // ─── Kodomo (เด็ก) ───
-  {
-    brand: "ยาสีฟันโคโดโม",
-    name: "รุ่น สตรอว์เบอร์รี่ สำหรับเด็ก",
-    fluoride: 1450,
-    age: "6 ปีขึ้นไป",
-    props: ["ป้องกันฟันผุในเด็ก", "รสชาติถูกใจเด็ก", "ดูแลฟันน้ำนม-ฟันแท้"],
-    image: "https://placehold.co/300x170/FCE4EC/880E4F?text=Kodomo%0AStrawberry",
-    imageAlt: "Kodomo Strawberry"
-  },
-  {
-    brand: "ยาสีฟันโคโดโม",
-    name: "รุ่น ส้ม สำหรับเด็ก",
-    fluoride: 1450,
-    age: "6 ปีขึ้นไป",
-    props: ["ป้องกันฟันผุในเด็ก", "รสชาติถูกใจเด็ก", "สูตรอ่อนโยน"],
-    image: "https://placehold.co/300x170/FFF9C4/E65100?text=Kodomo%0AOrange",
-    imageAlt: "Kodomo Orange"
-  },
-
-  // ─── Twin Lotus ───
-  {
-    brand: "ยาสีฟันทวินโลตัส",
-    name: "รุ่น Original Herbal",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["สมุนไพรไทย", "ป้องกันฟันผุ", "ดูแลเหงือก", "ลดกลิ่นปาก"],
-    image: "https://placehold.co/300x170/E8F5E9/1B5E20?text=Twin+Lotus%0AHerbal",
-    imageAlt: "Twin Lotus Herbal"
-  },
-  {
-    brand: "ยาสีฟันทวินโลตัส",
-    name: "รุ่น Clove & Neem",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["กานพลู+สะเดา", "ป้องกันฟันผุ", "ลดการอักเสบของเหงือก"],
-    image: "https://placehold.co/300x170/E8F5E9/2E7D32?text=Twin+Lotus%0AClove+Neem",
-    imageAlt: "Twin Lotus Clove Neem"
-  },
-
-  // ─── Lion (Thailand) ───
-  {
-    brand: "ยาสีฟัน Lion Ora2",
-    name: "รุ่น Stain Clear Crystal",
-    fluoride: 1500,
-    age: "ไม่ระบุ",
-    props: ["ขจัดคราบสีฟัน", "ฟันขาวขึ้น", "ป้องกันฟันผุ", "ลดกลิ่นปาก"],
-    image: "https://placehold.co/300x170/E8EAF6/1A237E?text=Ora2%0AStain+Clear",
-    imageAlt: "Ora2 Stain Clear"
-  },
-  {
-    brand: "ยาสีฟัน Lion Ora2",
-    name: "รุ่น Me Intensive Stain Clear",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ขจัดคราบเข้มข้น", "ฟันขาวขึ้น", "ป้องกันฟันผุ"],
-    image: "https://placehold.co/300x170/E8EAF6/283593?text=Ora2+Me%0AIntensive",
-    imageAlt: "Ora2 Me"
-  },
-
-  // ─── Enamel Pro / DenTek ───
-  {
-    brand: "ยาสีฟัน Pronamel",
-    name: "รุ่น Intensive Enamel Repair",
-    fluoride: 1450,
-    age: "ไม่ระบุ",
-    props: ["ซ่อมแซมผิวเคลือบฟัน", "ป้องกันฟันผุ", "ลดการกัดกร่อนจากกรด"],
-    image: "https://placehold.co/300x170/FFF3E0/E65100?text=Pronamel%0ARepair",
-    imageAlt: "Pronamel Repair"
-  },
+    props: ["ทำให้ฟันขาว", "ดูแลสุขภาพเหงือก", "ป้องกันฟันผุ"],
+    image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture109.png",
+    imageAlt: "ยาสีฟันพาโรดอนแทกซ์ รุ่น คอมพลีท โพรเทคชั่น"
+  }
 
 ];
