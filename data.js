@@ -10,7 +10,7 @@ const PRODUCTS = [
   {
     brand: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect ไอซี่ มินต์",
     fluoride: 1500,
-    age: "ไม่ระบุ",
+    age: "-",
     props: ["ป้องกันฟันผุ", "ดูแลสุขภาพเหงือก", "ลดการสะสมของแบคทีเรีย"],
     image: "https://raw.githubusercontent.com/dental-anamai/toothpaste-anamai/main/public/toothpaste-images/Picture83.png",
     imageAlt: "ยาสีฟันซิสเท็มมา รุ่น Ultra Care&Protect ไอซี่ มินต์"
